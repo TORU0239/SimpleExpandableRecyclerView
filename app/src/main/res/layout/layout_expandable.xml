@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp"
-    android:paddingBottom="10dp"
     android:orientation="vertical"
-    android:background="@drawable/custom_ripple">
-    <View
-        android:id="@+id/item_divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#D3D3D3"/>
+    android:background="@drawable/bg_list_selector"
+    android:clipToPadding="false"
+    android:outlineProvider="bounds"
+    android:elevation="10dp">
     <TextView
         android:id="@+id/item_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="10dp"
         android:textSize="16sp"
         tools:text="Léon: The Professional" />
     <LinearLayout
         android:id="@+id/sub_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/bg_shadow"
         android:orientation="vertical">
         <TextView
             android:id="@+id/sub_item_genre"
@@ -36,4 +38,10 @@
             android:layout_height="wrap_content"
             tools:text="Year: 1993" />
     </LinearLayout>
+    <View
+        android:id="@+id/item_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f4f4f4"
+        tools:visibility="gone"/>
 </LinearLayout>
